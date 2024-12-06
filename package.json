@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build-dockerfile": "docker build . -f Dockerfile -t cy-test",
-    "build-dockerfile-1": "docker build . -f Dockerfile.1 -t cy-test",
-    "build-dockerfile-1.10.0": "docker build . -f Dockerfile.1.10.0 -t cy-test",
-    "build-dockerfile-1.11.0": "docker build . -f Dockerfile.1.11.0 -t cy-test",
-    "build-dockerfile-1.11.1": "docker build . -f Dockerfile.1.11.1 -t cy-test",
-    "build-dockerfile-1.12.0": "docker build . -f Dockerfile.1.12.0 -t cy-test",
+    "build-dockerfile": "docker build . -f Dockerfile -t cy-test --no-cache",
+    "build-dockerfile-1": "docker build . -f Dockerfile.1 -t cy-test --no-cache",
+    "build-dockerfile-1.10.0": "docker build . -f Dockerfile.1.10.0 -t cy-test --no-cache",
+    "build-dockerfile-1.11.0": "docker build . -f Dockerfile.1.11.0 -t cy-test --no-cache",
+    "build-dockerfile-1.11.1": "docker build . -f Dockerfile.1.11.1 -t cy-test --no-cache",
+    "build-dockerfile-1.12.0": "docker build . -f Dockerfile.1.12.0 -t cy-test --no-cache",
     "test": "docker run -it --rm cy-test npx cypress run",
     "test:chromium": "docker run -it --rm cy-test npx cypress run -b chromium"
   },

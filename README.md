@@ -48,7 +48,7 @@ On Ubuntu `24.04.1` LTS, Node.js `v22.12.0` LTS, [Docker Desktop 4.36.0](https:/
 git clone https://github.com/MikeMcC399/cy-docker-multistage
 cd cy-docker-multistage
 npm ci
-docker build . -f Dockerfile.1 -t cy-test
+docker build . -f Dockerfile.1 -t cy-test --no-cache
 ```
 
 using `Dockerfile.1`:
@@ -138,6 +138,6 @@ Pin syntax to `1.10.0` in `Dockerfile.1.10.0`:
 To test workaround, as above, except:
 
 ```shell
-docker build . -f Dockerfile.1.10.0 -t cy-test  # pin to older version
-npm test                                        # run Cypress test
+docker build . -f Dockerfile.1.10.0 -t cy-test --no-cache # pin to older version
+npm test                                                  # run Cypress test
 ```
