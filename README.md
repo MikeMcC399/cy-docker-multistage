@@ -1,4 +1,6 @@
-# ONBUILD executed in grandchild
+Submitted as issue https://github.com/moby/buildkit/issues/5578
+
+# ONBUILD executed in multi-stage build grandchild
 
 ## Observed Behavior
 
