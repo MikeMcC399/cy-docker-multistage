@@ -1,0 +1,8 @@
+# syntax=docker/dockerfile:1
+FROM parent AS child
+
+RUN echo "child"
+
+FROM child AS grandchild
+
+RUN echo "grandchild"
